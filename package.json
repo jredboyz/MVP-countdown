@@ -1,0 +1,22 @@
+{
+  "name": "mvp-countdown",
+  "version": "1.0.0",
+  "description": "calorie counting app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jredboyz/MVP-countdown.git"
+  },
+  "author": "Joseph Redmond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jredboyz/MVP-countdown/issues"
+  },
+  "homepage": "https://github.com/jredboyz/MVP-countdown#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
