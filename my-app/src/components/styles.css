@@ -1,0 +1,19 @@
+@import-normalize;
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+label, input, select {
+  display: block;
+}
+
+.submit-btn {
+  width: min-content;
+  height: min-content;
+}
+
+.search-input {
+  display: flex;
+  align-items: flex-end;
+}
