@@ -1,4 +1,10 @@
 @import-normalize;
+:root {
+  --champagne: #F7E2C7;
+  --kellyGreen: #29660C;
+  --tealGreen: #578E87;
+  --green: #1C4508;
+}
 .form-container {
   display: flex;
   flex-direction: column;
@@ -8,12 +14,108 @@ label, input, select {
   display: block;
 }
 
+input, select {
+  width: 200px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+button {
+  margin-bottom: 5px;
+  border-style: none;
+  padding: 7px;
+  color: white;
+  background-color: var(--kellyGreen);
+}
+
 .submit-btn {
   width: min-content;
   height: min-content;
+}
+
+.definitions {
+  max-width: fit-content;
+  word-wrap: break-word;
 }
 
 .search-input {
   display: flex;
   align-items: flex-end;
 }
+
+.currentInfo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.currentInfo {
+  font-size: large;
+  margin-bottom: 5px;
+}
+
+.value {
+  font-weight: bold;
+}
+
+.schedule-container {
+  display: flex;
+}
+
+.weekday-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+  border-right: 2px solid black;
+}
+
+.weekday-container-last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.weekday {
+  text-decoration: underline;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes changeColor {
+  from {
+    color: var(--champagne);
+  }
+  to {
+    color: var(--green);
+  }
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadein 1s ease-in;
+}
+
+.warning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* animation: changeColor 3s ease-in; */
+}
+
+input, select {
+  padding: 2px;
+  font-size: large;
+}
+

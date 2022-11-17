@@ -5,7 +5,7 @@ import './styles.css';
 
 const { useRef } = React;
 
-const UserForm = () => {
+const UserForm = ({postUser}) => {
   const nameRef = useRef(null)
   const ageRef = useRef(null)
   const genderRef = useRef(null)
@@ -23,11 +23,13 @@ const UserForm = () => {
       height: heightRef.current.value,
       activityLevel: activityRef.current.value
     }
+    postUser(obj)
     console.log(obj)
   }
 
   return (
     <form onSubmit={(e) => submitHandler(e)} className='form-container'>
+      <h2>Enter Information Here</h2>
       <label>
         Full Name
         <input type='text' ref={nameRef} required/>
@@ -54,12 +56,12 @@ const UserForm = () => {
       <label>
         Activity Level
         <select ref={activityRef} required>
-          <option value='level _ 1'>Sedentary: little or no exercise</option>
-          <option value='level _ 2'>Exercise 1-3 times/week</option>
-          <option value='level _ 3'>Exercise 4-5 times/week</option>
-          <option value='level _ 4'>Daily exercise or intense exercise 3-4 times/week</option>
-          <option value='level _ 5'>Intense exercise 6-7 times/week</option>
-          <option value='level _ 6'>Very intense exercise daily, or physical job</option>
+          <option value='level_1'>Sedentary: little or no exercise</option>
+          <option value='level_2'>Exercise 1-3 times/week</option>
+          <option value='level_3'>Exercise 4-5 times/week</option>
+          <option value='level_4'>Daily exercise or intense exercise 3-4 times/week</option>
+          <option value='level_5'>Intense exercise 6-7 times/week</option>
+          <option value='level_6'>Very intense exercise daily, or physical job</option>
         </select>
       </label>
       <button className='submit-btn' type='submit'>Submit</button>

@@ -1,4 +1,10 @@
 @import-normalize;
+:root {
+  --champagne: #F7E2C7;
+  --kellyGreen: #29660C;
+  --tealGreen: #578E87;
+  --green: #1C4508;
+}
 .App {
   /* text-align: center; */
 }
@@ -15,8 +21,11 @@
 }
 
 h1 {
-  margin: 10px 0px;
-  border-bottom: 2px solid black;
+  margin: 0px;
+  padding: 10px 0 0 10px;
+  border-bottom: 2px solid var(--kellyGreen);
+  background-color: var(--green);
+  color: white;
 }
 
 .App-header {
@@ -45,5 +54,11 @@ h1 {
 
 .top-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
